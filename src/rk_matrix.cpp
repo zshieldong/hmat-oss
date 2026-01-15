@@ -257,7 +257,6 @@ template<typename T> void RkMatrix<T>::truncate(double epsilon, int initialPivot
     return;
   }
 
-  assert(rows->size() >= rank());
   // Case: more columns than one dimension of the matrix.
   // In this case, the calculation of the SVD of the matrix "R_a R_b^t" is more
   // expensive than computing the full SVD matrix. We make then a full matrix conversion,
